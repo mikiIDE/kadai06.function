@@ -1,0 +1,173 @@
+body {
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(248, 198, 134);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-decoration:underline;
+    text-decoration-color: #f7960e;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.play-contents {
+    border: 5px solid #f7960e;
+    width: 750px;
+    height: 100px;
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 20px;
+}
+
+button {
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-width: 80px;
+    min-height: 80px;
+    background-color: #FF7518;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 10px;
+    border: 1px solid #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#rotateIcon:hover,#jumpIcon:hover,#blinkIcon:hover,#shakeIcon:hover {
+    background-color: #A52A2A;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #FF4500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: scale(0.95);
+}
+
+#collapseAll{
+    position: relative;
+}
+
+#collapseAll:hover{
+    cursor: not-allowed;
+    background-color: #A52A2A;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+
+.badchild{
+    display:none;
+    position: absolute;
+    top: 22%;
+    right: 25%;
+    padding: 5px;
+    border: 3px solid #e74c3c;
+    border-radius: 10px;
+    background-color: black; opacity: 80%;
+    color:#fff
+}
+
+#collapseAll:hover .badchild {
+    display: inline;
+  }
+
+.after{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+#goodchild{
+    display:none;
+  }
+
+
+/* アニメーションの項目 */
+/* @keyframes 任意の名前 {
+    0% {CSSプロパティ:値;}
+    100% {CSSプロパティ:値;}
+} */
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes jump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes shake {
+    0% {transform: translate(0px, 0px) rotateZ(0deg)}
+    25% {transform: translate(3px, 3px) rotateZ(2deg)}
+    50% {transform: translate(0px, 3px) rotateZ(0deg)}
+    75% {transform: translate(3px, 0px) rotateZ(-2deg)}
+    100% {transform: translate(0px, 0px) rotateZ(0deg)}
+}
+
+
+/* レスポンシブ */
+@media screen and (max-width: 1230px) {
+    .icon{
+        width: calc(100%);
+    }
+}
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 520px){
+    h1{
+        font-size: 1.2rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+    .play-contents{
+        width:470px;
+        height:auto;
+        font-size: 1rem;
+    }
+    button{
+        min-width: 40px;
+        min-height: 40px;
+        font-size: 1rem;
+    }
+}

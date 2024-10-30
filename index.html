@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Play with Jack !!</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1 id="title1">P l a y 　 w i t h 　 J a c k 　!!</h1>
+        <h2 id="title2">ジャックと一緒に何して遊ぶ？</h2>
+    </div>
+    <div class="main">
+        <div class="play-contents">
+            <button id="rotateIcon">まわる</button>
+            <button id="jumpIcon">はねる</button>
+            <button id="blinkIcon">点滅</button>
+            <button id="shakeIcon">震える</button>
+            <button id="collapseAll">崩壊</button>
+            <span class="badchild">悪い子は３回クリック！</span><!-- 最初はかくして、hoverで浮かび上がるようにしたい -->
+        </div>
+    </div>
+    <div class="icon">
+        <img id="jack3" src="img/pump3.png" width="100" alt="かぼちゃのイラスト">
+        <img id="jack1" src="img/pump1.png" width="100" alt="かぼちゃのイラスト">
+        <img id="jack8" src="img/pump8.png" width="100" alt="かぼちゃのイラスト">
+        <img id="jack5" src="img/pump5.png" width="100" alt="かぼちゃのイラスト">
+        <img id="jack7" src="img/pump7.png" width="100" alt="かぼちゃのイラスト">
+        <img id="jack2" src="img/pump2.png" width="100" alt="かぼちゃのイラスト">
+        <img id="jack6" src="img/pump6.png" width="100" alt="かぼちゃのイラスト">
+        <img id="jack4" src="img/pump4.png" width="100" alt="かぼちゃのイラスト">
+    </div>
+    <div class="after">
+        <button id="goodchild" style="display: none;">反省する</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
